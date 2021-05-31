@@ -1,5 +1,5 @@
 package com.bridgelabz;
-
+@FunctionalInterface
 interface IMathFunction {
     int calculation(int a, int b);
     static void printResult(int i, int i1, String function, IMathFunction funObj){
