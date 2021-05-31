@@ -5,17 +5,18 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
-
-//import java.util.function.Consumer;
-class MyConsumer implements Consumer<Integer> {
-public void accept(Integer t){
-        System.out.println("Math 2 Consumer value:" + t);
-        }
-        }
-
+import java.util.function.Function;
 public class MathOperationAppMain {
 
     public static void main(String[] args) {
+        //
+        IMathFunction add = (a, b) -> a + b;
+        IMathFunction multiply = (a, b) -> a * b;
+        IMathFunction substract = (a, b) -> a / b;
+        IMathFunction.printResult(6, 3, "Addition ", add);
+        IMathFunction.printResult(6, 3, "Multiplication ", multiply);
+        IMathFunction.printResult(6, 3, "Substraction ", substract);
+
         ArrayList<Integer> numbers= new ArrayList<Integer>(Arrays.asList(23,28,98,47,23,12,24));
 
         //method 1...
@@ -46,6 +47,11 @@ public class MathOperationAppMain {
         //method 5..(implicit lambda)
         numbers.forEach(n->{
             System.out.println("Method 5: for each numbers "+n);
+        });
+        //conver interget to double of given list
+        Function<Integer, Double> doubleFunction = Integer -> (Double.valueOf(Integer));
+        numbers.forEach(n -> {
+            System.out.println("Method 6: Applying double function " + doubleFunction.apply(n));
         });
 
 

@@ -1,6 +1,7 @@
 com/bridgelabz/IMathFunction.java
  com.bridgelabz.IMathFunction
+com/bridgelabz/MyConsumer.java
+ com.bridgelabz.MyConsumer
 com/bridgelabz/MathOperationAppMain.java
  com.bridgelabz.MathOperationAppMain
  com.bridgelabz.MathOperationAppMain$1
- com.bridgelabz.MyConsumer
