@@ -4,9 +4,10 @@ public class MathOperationAppMain implements IMathFunction {
         IMathFunction add = (a, b) -> a + b;
         IMathFunction multiply = (a, b) -> a * b;
         IMathFunction substract = (a, b) -> a / b;
-        System.out.println("Addition:-" + add.calculation(6,3));
-        System.out.println("Substraction:-" + multiply.calculation(2,5));
-        System.out.println("Division:-" + substract.calculation(6,2));
+        IMathFunction.printResult(6, 3, "Addition ", add);
+        IMathFunction.printResult(6, 3, "Multiplication ", multiply);
+        IMathFunction.printResult(6, 3, "Substraction ", substract);
+
     }
     @Override
     public int calculation(int a, int b) {
